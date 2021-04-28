@@ -6,7 +6,7 @@
   <artifactId>usb4java</artifactId>
   <packaging>jar</packaging>
   <name>usb4java</name>
-  <version>1.3.1-SNAPSHOT</version>
+  <version>1.3.1-BITWIG</version>
   <url>http://usb4java.org/</url>
   <description>
     USB library for Java based on libusb and implementing javax-usb (JSR-80).
@@ -60,7 +60,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <libusb4java.version>1.3.1-SNAPSHOT</libusb4java.version>
+    <libusb4java.version>1.3.1-BITWIG</libusb4java.version>
   </properties>
 
   <scm>
@@ -138,14 +138,14 @@
   <build>
     <plugins>
 
-      <!-- Use Java 6 -->
+      <!-- Use Java 8 -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
@@ -190,7 +190,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.0</version>
+        <version>3.0.0-M5</version>
+        <configuration>
+           <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -306,36 +309,51 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+<!--
     <dependency>
       <groupId>org.usb4java</groupId>
       <artifactId>libusb4java</artifactId>
       <version>${libusb4java.version}</version>
       <classifier>linux-x86</classifier>
     </dependency>
+-->
+<!--
     <dependency>
       <groupId>org.usb4java</groupId>
       <artifactId>libusb4java</artifactId>
       <version>${libusb4java.version}</version>
       <classifier>linux-x86-64</classifier>
     </dependency>
+-->
+<!--
     <dependency>
       <groupId>org.usb4java</groupId>
       <artifactId>libusb4java</artifactId>
       <version>${libusb4java.version}</version>
       <classifier>win32-x86</classifier>
     </dependency>
+-->
+
+<!--
     <dependency>
       <groupId>org.usb4java</groupId>
       <artifactId>libusb4java</artifactId>
       <version>${libusb4java.version}</version>
       <classifier>win32-x86-64</classifier>
     </dependency>
+
+-->
     <dependency>
       <groupId>org.usb4java</groupId>
-      <artifactId>libusb4java</artifactId>
+      <artifactId>libusb4java-darwin-x86_64</artifactId>
       <version>${libusb4java.version}</version>
-      <classifier>darwin-x86-64</classifier>
     </dependency>
+    <dependency>
+      <groupId>org.usb4java</groupId>
+      <artifactId>libusb4java-darwin-aarch64</artifactId>
+      <version>${libusb4java.version}</version>
+    </dependency>
+<!--
     <dependency>
       <groupId>org.usb4java</groupId>
       <artifactId>libusb4java</artifactId>
@@ -348,6 +366,7 @@
       <version>${libusb4java.version}</version>
       <classifier>linux-aarch64</classifier>
     </dependency>
+-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
