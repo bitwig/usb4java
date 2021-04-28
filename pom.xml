@@ -309,22 +309,17 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-<!--
+
     <dependency>
       <groupId>org.usb4java</groupId>
-      <artifactId>libusb4java</artifactId>
+      <artifactId>libusb4java-linux-x86_64</artifactId>
       <version>${libusb4java.version}</version>
-      <classifier>linux-x86</classifier>
     </dependency>
--->
-<!--
     <dependency>
       <groupId>org.usb4java</groupId>
-      <artifactId>libusb4java</artifactId>
+      <artifactId>libusb4java-win32-x86_64</artifactId>
       <version>${libusb4java.version}</version>
-      <classifier>linux-x86-64</classifier>
     </dependency>
--->
 <!--
     <dependency>
       <groupId>org.usb4java</groupId>
@@ -332,16 +327,6 @@
       <version>${libusb4java.version}</version>
       <classifier>win32-x86</classifier>
     </dependency>
--->
-
-<!--
-    <dependency>
-      <groupId>org.usb4java</groupId>
-      <artifactId>libusb4java</artifactId>
-      <version>${libusb4java.version}</version>
-      <classifier>win32-x86-64</classifier>
-    </dependency>
-
 -->
     <dependency>
       <groupId>org.usb4java</groupId>
